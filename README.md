@@ -2,7 +2,7 @@
 
 Personal portfolio website showcasing my work as a Software Engineer transitioning into Data Analyst & BI Developer roles.
 
-🌐 **Live site:** https://PrasannaJaganadham.github.io/
+🌐 **Live site:** (https://prasannajaganadham.github.io/)
 
 ## About Me
 
