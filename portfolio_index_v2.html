@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Prasanna Jaganadham — Software Engineer · Banking Data · MSc Data Science @ BSB</title>
+<meta name="description" content="Software Engineer with 1.5 years at Infosys on the Finacle core banking platform, working with European banks. Now finishing MSc Data Science at Burgundy School of Business (Grande École). Open to Data Analyst & BI Developer roles in France and the EU." />
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Prasanna Jaganadham — Software Engineer · Banking Data">
+<meta property="og:description" content="Ex-Infosys Finacle core banking (European banks). MSc Data Science @ BSB Grande École. Open to Data Analyst & BI Developer roles in France 🇫🇷">
+<meta property="og:url" content="https://prasanna-jaganadham.com/">
+<meta property="og:image" content="https://prasanna-jaganadham.com/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Prasanna Jaganadham — Data Analyst · BI Developer">
+<meta name="twitter:description" content="Ex-Infosys Finacle banking · MSc Data Science @ BSB Grande École · 3× Alteryx certified · Open to Data Analyst & BI Developer roles in France 🇫🇷">
+<meta name="twitter:image" content="https://prasanna-jaganadham.com/og-card.png">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='36' fill='%2322d3ee'/></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:       #0a0f1e;
+  --bg-2:     #0e1428;
+  --bg-3:     #141c35;
+  --surface:        rgba(255,255,255,0.025);
+  --surface-2:      rgba(255,255,255,0.05);
+  --surface-accent: rgba(34,211,238,0.05);
+  --border:         rgba(255,255,255,0.08);
+  --border-strong:  rgba(255,255,255,0.14);
+  --border-accent:  rgba(34,211,238,0.18);
+  --text:       #edf1f7;
+  --text-dim:   #a0acbf;
+  --text-muted: #6b7591;
+  --accent:       #22d3ee;
+  --accent-soft:  #67e8f9;
+  --accent-pale:  #a5f3fc;
+  --accent-deep:  #0891b2;
+  --green:  #22c55e;
+  --amber:  #f59e0b;
+  --violet: #a78bfa;
+  --radius: 14px;
+  --radius-lg: 20px;
+  --ease: cubic-bezier(.22,.61,.36,1);
+  --ease-out: cubic-bezier(.16,1,.3,1);
+  --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+  --serif: 'Fraunces', Georgia, serif;
+}
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; }
+html, body{ background: var(--bg); color: var(--text); }
+body{
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 16px; line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+a{ color: inherit; text-decoration: none; }
+button{ font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+img{ max-width: 100%; display: block; }
+::selection{ background: var(--accent); color: var(--bg); }
+::-webkit-scrollbar{ width: 10px; height: 10px; }
+::-webkit-scrollbar-track{ background: #060a14; }
+::-webkit-scrollbar-thumb{ background: #1f2a44; border-radius: 10px; border: 2px solid #060a14; }
+::-webkit-scrollbar-thumb:hover{ background: #2a3a5c; }
+
+#particles{ position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+body::before{
+  content:""; position: fixed; inset: 0; z-index: 1; pointer-events: none;
+  background:
+    radial-gradient(55% 45% at 85% 0%, rgba(34,211,238,.08), transparent 70%),
+    radial-gradient(45% 55% at 0% 30%, rgba(34,211,238,.04), transparent 70%),
+    radial-gradient(60% 40% at 50% 110%, rgba(34,211,238,.06), transparent 60%);
+}
+.noise{
+  position: fixed; inset: 0; pointer-events: none; z-index: 2;
+  opacity: .04; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+.nav{
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 18px 32px;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  background: rgba(10,15,30,.7);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s var(--ease), background .3s var(--ease);
+  opacity: 0; transform: translateY(-20px);
+  animation: navIn .7s var(--ease-out) .1s forwards;
+}
+@keyframes navIn{ to{ opacity: 1; transform: translateY(0); } }
+.nav.scrolled{ border-bottom-color: var(--border); background: rgba(10,15,30,.88); }
+.nav-logo{ display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: .95rem; letter-spacing: -0.01em; }
+.nav-logo .status-dot{
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--green); box-shadow: 0 0 12px var(--green);
+  animation: dotPulse 2.2s ease-in-out infinite;
+}
+@keyframes dotPulse{ 0%,100%{ opacity: 1; } 50%{ opacity: .55; } }
+.nav-links{ display: flex; gap: 4px; list-style: none; }
+.nav-links a{
+  padding: 8px 14px; font-size: .88rem; color: var(--text-dim); border-radius: 8px;
+  transition: color .25s var(--ease), background .25s var(--ease);
+}
+.nav-links a:hover{ color: var(--text); background: var(--surface-2); }
+
+.nav-actions{ display: flex; align-items: center; gap: 10px; }
+.nav-cv{
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 14px; border-radius: 8px; font-size: .85rem; color: var(--text-dim);
+  border: 1px solid var(--border); background: var(--surface);
+  transition: border-color .25s var(--ease), color .25s var(--ease);
+  position: relative;
+}
+.nav-cv:hover{ border-color: var(--border-strong); color: var(--text); }
+.nav-cv .caret{ font-size: .7rem; opacity: .6; }
+.cv-dropdown{
+  position: absolute; top: calc(100% + 8px); right: 0;
+  min-width: 180px; padding: 6px;
+  border-radius: 12px; border: 1px solid var(--border-strong);
+  background: rgba(14,20,40,.98);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 40px rgba(0,0,0,.6);
+  opacity: 0; visibility: hidden; transform: translateY(-4px);
+  transition: opacity .18s var(--ease), visibility .18s var(--ease), transform .18s var(--ease);
+  z-index: 10;
+}
+.cv-menu.open .cv-dropdown{ opacity: 1; visibility: visible; transform: translateY(0); }
+.cv-dropdown a{
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px; border-radius: 8px;
+  font-size: .85rem; color: var(--text-dim);
+  transition: background .2s var(--ease), color .2s var(--ease);
+}
+.cv-dropdown a:hover{ background: var(--surface-2); color: var(--text); }
+.nav-contact{
+  padding: 9px 16px; border-radius: 8px;
+  font-size: .85rem; font-weight: 500;
+  background: var(--accent); color: var(--bg);
+  transition: transform .2s var(--ease), background .2s var(--ease), box-shadow .2s var(--ease);
+}
+.nav-contact:hover{ transform: translateY(-1px); background: var(--accent-soft); box-shadow: 0 8px 24px rgba(34,211,238,.3); }
+@media (max-width: 860px){ .nav-links{ display: none; } .nav{ padding: 14px 20px; } }
+@media (max-width: 560px){ .nav-contact{ display: none; } }
+
+main{ position: relative; z-index: 3; }
+section{ padding: 110px 0; position: relative; }
+.container{ width: min(1100px, calc(100% - 48px)); margin: 0 auto; }
+
+.eyebrow{
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--mono); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--text-muted); margin-bottom: 24px;
+}
+.eyebrow::before{ content: ""; width: 32px; height: 1px; background: var(--accent); opacity: .5; }
+.section-title{
+  font-family: var(--serif); font-size: clamp(2rem, 4.2vw, 2.8rem);
+  font-weight: 600; letter-spacing: -0.02em; line-height: 1.1;
+  margin-bottom: 18px;
+}
+.section-title em{ font-style: italic; color: var(--accent); }
+.section-lead{ font-size: 1.02rem; color: var(--text-dim); max-width: 620px; }
+
+.hero{
+  min-height: 100vh; padding: 140px 0 80px;
+  display: flex; align-items: center; position: relative;
+}
+.hero-container{ width: min(1100px, calc(100% - 48px)); margin: 0 auto; position: relative; z-index: 1; }
+.status-row{
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 8px 14px; border-radius: 99px;
+  background: rgba(34,197,94,.1);
+  border: 1px solid rgba(34,197,94,.3);
+  font-size: .82rem; color: #86efac;
+  font-family: var(--mono);
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeUp .7s var(--ease-out) .2s forwards;
+}
+.status-row .live-dot{
+  position: relative; width: 7px; height: 7px;
+  border-radius: 50%; background: var(--green);
+}
+.status-row .live-dot::after{
+  content: ""; position: absolute; inset: -4px;
+  border-radius: 50%; background: var(--green);
+  opacity: .4;
+  animation: liveDotPulse 1.8s ease-out infinite;
+}
+@keyframes liveDotPulse{
+  0%{ transform: scale(.4); opacity: .6; }
+  100%{ transform: scale(2.2); opacity: 0; }
+}
+.status-row .sep{ opacity: .3; }
+
+.hero-name{
+  font-family: var(--serif);
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-weight: 500; letter-spacing: -0.035em; line-height: 1;
+  margin-bottom: 16px; opacity: 0;
+  animation: fadeUp .7s var(--ease-out) .35s forwards;
+}
+.hero-name em{ font-style: italic; font-weight: 600; color: var(--accent); }
+.hero-role{
+  font-size: 1.05rem; color: var(--text-dim);
+  margin-bottom: 28px; max-width: 600px; opacity: 0;
+  animation: fadeUp .7s var(--ease-out) .5s forwards;
+}
+.hero-role strong{ color: var(--text); font-weight: 600; }
+@keyframes fadeUp{
+  from{ opacity: 0; transform: translateY(14px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+
+.qa-strip{
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+  margin: 40px 0; padding: 22px 0;
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  opacity: 0;
+  animation: fadeUp .7s var(--ease-out) .65s forwards;
+}
+.qa-item{ padding: 0 22px; border-right: 1px solid var(--border); }
+.qa-item:last-child{ border-right: none; }
+.qa-item .q{
+  font-family: var(--mono); font-size: .68rem; letter-spacing: .15em;
+  text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px;
+}
+.qa-item .a{ font-size: .95rem; color: var(--text); font-weight: 500; line-height: 1.35; }
+.qa-item .a .tag-check{ display: inline-flex; align-items: center; gap: 5px; color: #86efac; }
+.qa-item .a .tag-check::before{ content: "✓"; font-size: .8rem; }
+.qa-item .a .sub{ display: block; color: var(--text-muted); font-size: .82rem; font-weight: 400; margin-top: 2px; }
+@media (max-width: 860px){
+  .qa-strip{ grid-template-columns: repeat(2, 1fr); gap: 16px 0; padding: 18px 0; }
+  .qa-item{ padding: 6px 16px; border-right: none; border-bottom: 1px solid var(--border); padding-bottom: 14px; }
+  .qa-item:nth-child(2n){ border-right: none; }
+  .qa-item:nth-last-child(-n+2){ border-bottom: none; padding-bottom: 0; }
+  .qa-item:nth-child(odd){ border-right: 1px solid var(--border); padding-right: 16px; }
+}
+
+.hero-ctas{
+  display: flex; gap: 12px; flex-wrap: wrap; opacity: 0;
+  animation: fadeUp .7s var(--ease-out) .8s forwards;
+}
+.btn{
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 22px; border-radius: 10px;
+  font-size: .92rem; font-weight: 500;
+  transition: transform .2s var(--ease), background .2s var(--ease), border-color .2s var(--ease), box-shadow .2s var(--ease);
+}
+.btn-primary{ background: var(--accent); color: var(--bg); }
+.btn-primary:hover{ transform: translateY(-2px); background: var(--accent-soft); box-shadow: 0 10px 30px rgba(34,211,238,.35); }
+.btn-secondary{ border: 1px solid var(--border-strong); background: var(--surface); color: var(--text); }
+.btn-secondary:hover{ transform: translateY(-2px); border-color: var(--accent); background: var(--surface-accent); }
+.btn .arrow{ display: inline-block; transition: transform .2s var(--ease); }
+.btn:hover .arrow{ transform: translateX(3px); }
+
+.scroll-hint{
+  margin-top: 80px;
+  font-family: var(--mono); font-size: .7rem;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--text-muted);
+  display: flex; align-items: center; gap: 12px;
+  opacity: 0;
+  animation: fadeUp .7s var(--ease-out) 1s forwards;
+}
+.scroll-hint .line{ width: 40px; height: 1px; background: var(--text-muted); position: relative; overflow: hidden; }
+.scroll-hint .line::after{
+  content: ""; position: absolute; inset: 0; background: var(--accent);
+  animation: scrollLine 2.2s ease-in-out infinite;
+}
+@keyframes scrollLine{
+  0%{ transform: translateX(-100%); }
+  50%{ transform: translateX(0); }
+  100%{ transform: translateX(100%); }
+}
+
+.about-grid{ display: grid; grid-template-columns: 1fr 300px; gap: 60px; margin-top: 40px; }
+.about-body p{ font-size: 1.05rem; color: var(--text-dim); line-height: 1.75; margin-bottom: 20px; max-width: 620px; }
+.about-body p:last-child{ margin-bottom: 0; }
+.about-body p strong{ color: var(--text); font-weight: 600; }
+.about-body .pull{
+  font-family: var(--serif); font-style: italic;
+  font-size: 1.18rem; color: var(--text); line-height: 1.5;
+  padding: 20px 24px;
+  border-left: 2px solid var(--accent);
+  background: var(--surface-accent);
+  margin: 24px 0; border-radius: 0 12px 12px 0; max-width: 620px;
+}
+.about-facts{
+  display: flex; flex-direction: column; gap: 2px;
+  align-self: start; position: sticky; top: 100px;
+}
+.fact{ padding: 16px 0; border-bottom: 1px solid var(--border); }
+.fact:first-child{ padding-top: 0; }
+.fact:last-child{ border-bottom: none; }
+.fact .k{
+  font-family: var(--mono); font-size: .68rem;
+  letter-spacing: .15em; text-transform: uppercase;
+  color: var(--text-muted); margin-bottom: 4px;
+}
+.fact .v{ font-size: .92rem; color: var(--text); font-weight: 500; line-height: 1.4; }
+.fact .v .green{ color: #86efac; }
+.fact .v .sub{ display: block; font-size: .8rem; color: var(--text-muted); margin-top: 2px; font-weight: 400; }
+@media (max-width: 860px){
+  .about-grid{ grid-template-columns: 1fr; gap: 36px; }
+  .about-facts{ position: static; }
+}
+
+.exp-wrap{ margin-top: 50px; }
+.exp-item{
+  position: relative; padding: 30px 0;
+  border-bottom: 1px solid var(--border);
+  display: grid; grid-template-columns: 180px 1fr; gap: 40px;
+  transition: padding .3s var(--ease);
+}
+.exp-item:last-child{ border-bottom: none; }
+.exp-item:hover{ padding-left: 8px; }
+.exp-left .date{
+  font-family: var(--mono); font-size: .8rem;
+  color: var(--text); font-weight: 500; margin-bottom: 4px;
+}
+.exp-left .loc{ font-family: var(--mono); font-size: .74rem; color: var(--text-muted); }
+.exp-right .title-row{
+  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 4px;
+}
+.exp-right .title{
+  font-family: var(--serif); font-size: 1.35rem;
+  font-weight: 600; letter-spacing: -0.01em;
+}
+.exp-right .at{ color: var(--text-dim); font-size: 1.05rem; }
+.exp-right .company{ color: var(--accent); font-weight: 500; font-size: 1.05rem; }
+.exp-right .bullets{
+  list-style: none; display: grid; gap: 10px;
+  margin-top: 14px; max-width: 680px;
+}
+.exp-right .bullets li{
+  position: relative; padding-left: 18px;
+  color: var(--text-dim); font-size: .96rem; line-height: 1.55;
+}
+.exp-right .bullets li::before{
+  content: ""; position: absolute; left: 0; top: 11px;
+  width: 8px; height: 1px; background: var(--accent); opacity: .6;
+}
+.exp-right .bullets li strong{ color: var(--text); font-weight: 600; }
+.exp-right .stack{ display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
+.stack-chip{
+  font-family: var(--mono); font-size: .72rem;
+  padding: 4px 10px; border-radius: 6px;
+  background: var(--surface); border: 1px solid var(--border); color: var(--text-dim);
+}
+@media (max-width: 860px){
+  .exp-item{ grid-template-columns: 1fr; gap: 14px; padding: 26px 0; }
+  .exp-item:hover{ padding-left: 0; }
+}
+
+.work-intro{
+  display: flex; align-items: center; gap: 14px;
+  margin-top: 36px; margin-bottom: 30px;
+  padding: 14px 18px;
+  background: rgba(34,211,238,.05);
+  border: 1px solid rgba(34,211,238,.18);
+  border-radius: 10px;
+  font-size: .88rem; color: var(--accent-pale); max-width: 620px;
+}
+.work-intro .icon{
+  flex-shrink: 0; width: 22px; height: 22px;
+  border-radius: 50%; background: rgba(34,211,238,.15);
+  display: grid; place-items: center;
+  font-size: .75rem; color: var(--accent);
+}
+.work-list{ margin-top: 30px; display: grid; gap: 16px; }
+.work{
+  border: 1px solid var(--border); border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, var(--surface), transparent);
+  transition: border-color .35s var(--ease), transform .35s var(--ease);
+  overflow: hidden;
+}
+.work:hover{ border-color: var(--border-strong); transform: translateY(-2px); }
+.work-head{
+  display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: start;
+  padding: 28px 30px; cursor: pointer;
+}
+.work-head-left .work-meta{
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 12px;
+  font-family: var(--mono); font-size: .7rem;
+  letter-spacing: .15em; text-transform: uppercase; color: var(--text-muted);
+  flex-wrap: wrap;
+}
+.work-head-left .work-meta .tag{
+  padding: 3px 8px; border-radius: 5px;
+  background: var(--surface-2); color: var(--text-dim); letter-spacing: .1em;
+}
+.work-head-left .work-meta .tag.real{
+  background: rgba(34,197,94,.12); color: #86efac;
+  border: 1px solid rgba(34,197,94,.3);
+}
+.work-head-left .work-meta .tag.academic{
+  background: rgba(167,139,250,.08); color: #c4b5fd;
+  border: 1px solid rgba(167,139,250,.25);
+}
+.work-head-left h3{
+  font-family: var(--serif); font-size: 1.55rem;
+  font-weight: 600; letter-spacing: -0.015em; line-height: 1.2;
+  margin-bottom: 10px;
+}
+.work-head-left .work-one{
+  color: var(--text-dim); font-size: .98rem; line-height: 1.55; max-width: 560px;
+}
+.work-head-right{
+  display: flex; flex-direction: column; align-items: flex-end; gap: 8px; text-align: right;
+}
+.work-headline{
+  font-family: var(--serif); font-size: 1.8rem;
+  font-weight: 600; letter-spacing: -0.02em; line-height: 1; color: var(--text);
+}
+.work-headline .num{
+  background: linear-gradient(180deg, var(--text), var(--accent));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.work-headline-label{
+  font-family: var(--mono); font-size: .7rem;
+  letter-spacing: .15em; text-transform: uppercase; color: var(--text-muted);
+}
+.work-expand{
+  font-family: var(--mono); font-size: .7rem;
+  letter-spacing: .15em; color: var(--text-muted);
+  margin-top: 6px;
+  display: inline-flex; align-items: center; gap: 6px;
+  transition: color .2s var(--ease);
+}
+.work-expand .arrow{ transition: transform .35s var(--ease); }
+.work.open .work-expand .arrow{ transform: rotate(180deg); }
+.work-head:hover .work-expand{ color: var(--text); }
+.work-body{ max-height: 0; overflow: hidden; transition: max-height .5s var(--ease); }
+.work.open .work-body{ max-height: 2200px; }
+.work-body-inner{
+  padding: 0 30px 30px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  border-top: 1px solid var(--border); margin-top: 8px;
+}
+.wb-block{ padding: 22px 24px 22px 0; border-right: 1px solid var(--border); }
+.wb-block:nth-child(2n){ padding-left: 24px; padding-right: 0; border-right: none; }
+.wb-block:nth-child(n+3){ border-top: 1px solid var(--border); }
+.wb-block.full{ grid-column: span 2; padding: 22px 0; border-right: none; border-top: 1px solid var(--border); }
+.wb-label{
+  font-family: var(--mono); font-size: .68rem;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 10px;
+}
+.wb-label.data{ color: var(--accent-pale); }
+.wb-label.approach{ color: var(--accent-soft); }
+.wb-label.insight{ color: #c4b5fd; }
+.wb-label.impact{ color: #86efac; }
+.wb-label.stack{ color: var(--text-muted); }
+.wb-content{ font-size: .94rem; color: var(--text-dim); line-height: 1.65; }
+.wb-content strong{ color: var(--text); font-weight: 600; }
+.wb-content ul{ list-style: none; display: grid; gap: 7px; margin-top: 4px; }
+.wb-content ul li{ position: relative; padding-left: 16px; }
+.wb-content ul li::before{ content: "—"; position: absolute; left: 0; top: 0; color: var(--text-muted); }
+.wb-note{
+  margin-top: 12px; padding: 10px 14px;
+  background: var(--surface-accent);
+  border-left: 2px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  font-size: .85rem; color: var(--text-dim); font-style: italic;
+}
+.stack-chips{ display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.work-links{ display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.work-link{
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 14px; border-radius: 8px;
+  background: var(--surface); border: 1px solid var(--border-strong);
+  font-size: .82rem; color: var(--text); font-family: var(--mono);
+  transition: border-color .2s var(--ease), background .2s var(--ease);
+}
+.work-link:hover{ border-color: var(--accent); background: var(--surface-accent); }
+.work-link.disabled{ opacity: .5; cursor: not-allowed; color: var(--text-muted); }
+.work-link .ic{ font-size: .9rem; opacity: .7; }
+@media (max-width: 860px){
+  .work-head{ grid-template-columns: 1fr; padding: 22px 22px; }
+  .work-head-right{ align-items: flex-start; text-align: left; flex-direction: row; gap: 18px; }
+  .work-body-inner{ grid-template-columns: 1fr; padding: 0 22px 22px; }
+  .wb-block, .wb-block:nth-child(2n){ padding: 18px 0; border-right: none; border-top: 1px solid var(--border); }
+  .wb-block:first-child{ border-top: none; }
+  .wb-block.full{ grid-column: auto; }
+}
+
+.skills-intro{
+  display: flex; align-items: center; gap: 20px;
+  margin-top: 30px;
+  font-family: var(--mono); font-size: .78rem; color: var(--text-muted);
+}
+.skills-intro .legend{ display: inline-flex; align-items: center; gap: 6px; }
+.skills-intro .swatch{ width: 10px; height: 10px; border-radius: 3px; }
+.skills-intro .swatch.prod{ background: rgba(255,255,255,.25); border: 1px solid var(--border-strong); }
+.skills-intro .swatch.learn{ background: rgba(34,211,238,.18); border: 1px solid rgba(34,211,238,.35); }
+.skills-grid{ margin-top: 30px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.sc{
+  padding: 24px 26px; border: 1px solid var(--border);
+  border-radius: var(--radius); background: var(--surface);
+  transition: border-color .3s var(--ease);
+}
+.sc:hover{ border-color: var(--border-strong); }
+.sc-head{ display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; }
+.sc-head h4{ font-family: var(--serif); font-size: 1.08rem; font-weight: 600; letter-spacing: -0.01em; }
+.sc-head .cat{
+  font-family: var(--mono); font-size: .66rem;
+  letter-spacing: .15em; text-transform: uppercase; color: var(--text-muted);
+}
+.sc-chips{ display: flex; flex-wrap: wrap; gap: 6px; }
+.chip{
+  font-family: var(--mono); font-size: .74rem;
+  padding: 5px 11px; border-radius: 6px;
+  background: rgba(255,255,255,.035); border: 1px solid var(--border); color: var(--text-dim);
+  transition: color .2s var(--ease), border-color .2s var(--ease), background .2s var(--ease);
+}
+.chip:hover{ color: var(--text); border-color: var(--border-strong); background: var(--surface-2); }
+.chip.primary{ color: var(--text); background: rgba(255,255,255,.05); border-color: var(--border-strong); }
+.chip.learning{
+  color: var(--accent-pale);
+  border-color: rgba(34,211,238,.35);
+  background: rgba(34,211,238,.08);
+}
+.chip.learning::after{ content: " learning"; font-size: .58rem; opacity: .7; }
+@media (max-width: 700px){ .skills-grid{ grid-template-columns: 1fr; } .skills-intro{ flex-wrap: wrap; gap: 12px; } }
+
+.edu-wrap{ margin-top: 40px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; }
+.edu-col{ display: grid; gap: 14px; }
+.edu-card{
+  padding: 24px 26px; border: 1px solid var(--border);
+  border-radius: var(--radius); background: var(--surface);
+}
+.edu-top{ display: flex; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.edu-degree{ font-family: var(--serif); font-size: 1.08rem; font-weight: 600; }
+.edu-year{ font-family: var(--mono); font-size: .74rem; color: var(--text-muted); white-space: nowrap; }
+.edu-inst{ font-size: .9rem; color: var(--text-dim); }
+.edu-note{ margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); font-size: .86rem; color: var(--text-muted); }
+.side-card{ padding: 24px 26px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.side-head{
+  font-family: var(--mono); font-size: .68rem;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--text-muted); margin-bottom: 16px;
+}
+.lang-list{ display: grid; gap: 12px; }
+.lang-row{ display: flex; justify-content: space-between; align-items: center; }
+.lang-name{ font-size: .92rem; font-weight: 500; }
+.lang-level{ font-family: var(--mono); font-size: .72rem; color: var(--text-dim); }
+.lang-level.native{ color: #86efac; }
+.lang-level.c1{ color: var(--accent-pale); }
+.lang-level.b1{ color: #fde047; }
+.cert-list{ display: grid; gap: 8px; margin-top: 14px; }
+.cert-row{
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 0; border-top: 1px solid var(--border);
+  font-size: .88rem; color: var(--text-dim);
+}
+.cert-row:first-child{ border-top: none; padding-top: 0; }
+.cert-row .cert-dot{ width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+@media (max-width: 860px){ .edu-wrap{ grid-template-columns: 1fr; } }
+
+.contact-wrap{
+  margin-top: 40px; padding: 48px 40px;
+  border: 1px solid var(--border-accent); border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, var(--surface-accent), transparent);
+  display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center;
+}
+.contact-left h3{
+  font-family: var(--serif); font-size: 1.8rem;
+  font-weight: 600; letter-spacing: -0.02em; margin-bottom: 12px;
+}
+.contact-left p{ color: var(--text-dim); font-size: 1rem; max-width: 560px; margin-bottom: 22px; }
+.contact-links{ display: flex; flex-wrap: wrap; gap: 10px; }
+.cl{
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 18px; border-radius: 10px; font-size: .9rem;
+  transition: transform .2s var(--ease), background .2s var(--ease), border-color .2s var(--ease);
+}
+.cl.primary{ background: var(--accent); color: var(--bg); font-weight: 500; }
+.cl.primary:hover{ transform: translateY(-2px); background: var(--accent-soft); box-shadow: 0 10px 24px rgba(34,211,238,.3); }
+.cl.secondary{ border: 1px solid var(--border-strong); background: var(--surface); }
+.cl.secondary:hover{ transform: translateY(-2px); border-color: var(--accent); background: var(--surface-accent); }
+.cl .ic{ font-family: var(--mono); font-size: .85rem; opacity: .8; }
+.contact-right{
+  width: 140px; height: 140px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-deep), var(--accent));
+  display: grid; place-items: center;
+  font-family: var(--serif); font-weight: 600; font-size: 3rem; color: var(--bg);
+  box-shadow: 0 0 60px rgba(34,211,238,.35); position: relative;
+}
+.contact-right::before{
+  content: ""; position: absolute; inset: -4px;
+  border-radius: 50%; border: 1px solid rgba(34,211,238,.25);
+  animation: avaRing 3s ease-out infinite;
+}
+@keyframes avaRing{ 0%{ transform: scale(1); opacity: 1; } 100%{ transform: scale(1.4); opacity: 0; } }
+@media (max-width: 860px){
+  .contact-wrap{ grid-template-columns: 1fr; padding: 32px 24px; gap: 28px; text-align: center; }
+  .contact-right{ justify-self: center; }
+  .contact-links{ justify-content: center; }
+}
+
+footer{ padding: 40px 0 50px; border-top: 1px solid var(--border); margin-top: 40px; position: relative; z-index: 3; }
+.foot{
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 16px;
+  font-size: .82rem; color: var(--text-muted);
+}
+.foot .left{ font-family: var(--mono); font-size: .75rem; }
+.foot a{ color: var(--text-dim); transition: color .2s var(--ease); }
+.foot a:hover{ color: var(--accent); }
+.foot .right{ display: flex; gap: 18px; }
+
+.reveal{
+  opacity: 0; transform: translateY(20px);
+  transition: opacity .8s var(--ease-out), transform .8s var(--ease-out);
+}
+.reveal.visible{ opacity: 1; transform: translateY(0); }
+.reveal.d-1{ transition-delay: .08s; }
+.reveal.d-2{ transition-delay: .16s; }
+.reveal.d-3{ transition-delay: .24s; }
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration: .01s !important; transition-duration: .01s !important; }
+  .reveal{ opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+<div class="noise" aria-hidden="true"></div>
+
+<nav class="nav" id="nav">
+  <a href="#top" class="nav-logo">
+    <span class="status-dot"></span>
+    Prasanna Jaganadham
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#education">Education</a></li>
+  </ul>
+  <div class="nav-actions">
+    <div class="cv-menu" id="cvMenu">
+      <button class="nav-cv" id="cvBtn" type="button">
+        CV <span class="caret">▾</span>
+      </button>
+      <div class="cv-dropdown">
+        <a href="Prasanna_Jaganadham_CV_EN.pdf" data-cv="en">🇬🇧 English · PDF</a>
+        <a href="Prasanna_Jaganadham_CV_FR.pdf" data-cv="fr">🇫🇷 Français · PDF</a>
+      </div>
+    </div>
+    <a href="#contact" class="nav-contact">Contact</a>
+  </div>
+</nav>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-container">
+
+      <div class="status-row">
+        <span class="live-dot"></span>
+        <span>Open to work</span>
+        <span class="sep">·</span>
+        <span>France · EU</span>
+        <span class="sep">·</span>
+        <span>Indian national · Student visa · Stage available June 2026 · CDI from autumn 2026 (post-APS)</span>
+      </div>
+
+      <h1 class="hero-name">
+        Prasanna <em>Jaganadham.</em>
+      </h1>
+
+      <p class="hero-role">
+        <strong>Software Engineer</strong> moving into <strong>Data Analyst</strong> &amp; <strong>BI Developer</strong>.
+        1.5 years building banking software at Infosys on the Finacle platform for European banks.
+        Now finishing my MSc Data Science at BSB Grande École.
+      </p>
+
+      <div class="qa-strip">
+        <div class="qa-item">
+          <div class="q">Based in</div>
+          <div class="a">Dijon, France<span class="sub">Open to Paris · Lyon · remote EU</span></div>
+        </div>
+        <div class="qa-item">
+          <div class="q">Work permit</div>
+          <div class="a"><span class="tag-check">Eligible in France</span><span class="sub">Student visa now · APS from autumn 2026</span></div>
+        </div>
+        <div class="qa-item">
+          <div class="q">Languages</div>
+          <div class="a">EN C1 · FR B1<span class="sub">French → B2 by end 2026</span></div>
+        </div>
+        <div class="qa-item">
+          <div class="q">Track record</div>
+          <div class="a">Hours → minutes<span class="sub">SQL tuning · 200K+ records cleaned</span></div>
+        </div>
+      </div>
+
+      <div class="hero-ctas">
+        <a href="#work" class="btn btn-primary">See my work <span class="arrow">→</span></a>
+        <a href="Prasanna_Jaganadham_CV_EN.pdf" class="btn btn-secondary" id="heroCv">Download CV</a>
+        <a href="#contact" class="btn btn-secondary">Get in touch</a>
+      </div>
+
+      <div class="scroll-hint">
+        <span class="line"></span>
+        Scroll
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="reveal"><div class="eyebrow">01 · About</div></div>
+      <h2 class="section-title reveal d-1">
+        From banking software to <em>data science</em>.
+      </h2>
+      <p class="section-lead reveal d-2">
+        Here's the short version — what I did before France, what I'm doing now, and what I'm
+        looking for.
+      </p>
+
+      <div class="about-grid">
+        <div class="about-body reveal d-2">
+          <p>
+            I started my career as a <strong>Software Engineer at Infosys in Hyderabad</strong>,
+            spending <strong>1.5 years</strong> on the <strong>Finacle core banking platform</strong>
+            — the system used by major banks worldwide. My team supported deployments for
+            <strong>European banks</strong>, working across modules like Payments, CRM, Treasury,
+            and Wealth Management.
+          </p>
+
+          <div class="pull">
+            "Working on production banking software taught me to take data seriously — every
+            report, every query, every reconciliation matters when real money is on the line."
+          </div>
+
+          <p>
+            That experience pulled me toward analytics. In 2023 I moved to France for a
+            <strong>Master in Management</strong> at Burgundy School of Business (Grande École),
+            then continued with the <strong>MSc Data Science</strong>. The combination is
+            deliberate — I can talk to engineers, analysts, and business stakeholders in the
+            same meeting.
+          </p>
+          <p>
+            I'm now looking for <strong>Data Analyst</strong> or <strong>BI Developer</strong>
+            roles across France and the EU. Banking, fintech, insurance, or any business where
+            the work starts with clean data and ends with a decision.
+          </p>
+        </div>
+
+        <aside class="about-facts reveal d-3">
+          <div class="fact">
+            <div class="k">Status</div>
+            <div class="v"><span class="green">● Open to work</span>
+              <span class="sub">Stage from June 2026 · CDI from autumn 2026</span>
+            </div>
+          </div>
+          <div class="fact">
+            <div class="k">Target roles</div>
+            <div class="v">Data Analyst · BI Developer<span class="sub">Junior level</span></div>
+          </div>
+          <div class="fact">
+            <div class="k">Work modes</div>
+            <div class="v">Onsite · Hybrid · Remote<span class="sub">All three genuinely OK</span></div>
+          </div>
+          <div class="fact">
+            <div class="k">Target sectors</div>
+            <div class="v">Banking · Fintech · Insurance<span class="sub">Also: product / consulting</span></div>
+          </div>
+          <div class="fact">
+            <div class="k">Domain edge</div>
+            <div class="v">Banking · Finacle<span class="sub">Rare in junior data pool</span></div>
+          </div>
+          <div class="fact">
+            <div class="k">Response time</div>
+            <div class="v">&lt; 24 hours<span class="sub">Fastest on email or LinkedIn</span></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <div class="reveal"><div class="eyebrow">02 · Experience</div></div>
+      <h2 class="section-title reveal d-1">Where I've <em>actually</em> shipped.</h2>
+      <p class="section-lead reveal d-2">
+        Production work — what I really did, with the tools I really used. Numbers and details
+        I'd defend in an interview.
+      </p>
+
+      <div class="exp-wrap">
+
+        <article class="exp-item reveal">
+          <div class="exp-left">
+            <div class="date">Feb 2022 — Jun 2023</div>
+            <div class="loc">Hyderabad · India</div>
+            <div class="loc" style="margin-top:10px;">1 year 5 months · full-time</div>
+          </div>
+          <div class="exp-right">
+            <div class="title-row">
+              <div class="title">Software Engineer</div>
+              <div class="at">@</div>
+              <div class="company">Infosys Ltd.</div>
+            </div>
+            <div style="color:var(--text-dim); font-size:.94rem; max-width:620px; margin-top:6px;">
+              Worked on the <strong>Finacle core banking platform</strong> — Infosys's flagship
+              banking product, used by major banks globally. My team primarily supported
+              <strong>European banking clients</strong>, across modules including Payments, CRM,
+              Treasury, and Wealth Management.
+            </div>
+            <ul class="bullets">
+              <li>Built and maintained <strong>SQL queries and UNIX scripts</strong> for banking reports — extracting transaction, customer, and operational data from the Finacle backend.</li>
+              <li>Designed and delivered <strong>Excel-based reports</strong> for client banking teams, including transaction summaries, branch-level activity, and reconciliation outputs.</li>
+              <li>Optimised long-running SQL queries by adding indexes and rewriting joins — turning reports that took hours into ones that ran in minutes for the team.</li>
+              <li>Collaborated with onshore client teams across European time zones; documented data flows and handed over production-ready scripts.</li>
+            </ul>
+            <div class="stack">
+              <span class="stack-chip">Finacle</span>
+              <span class="stack-chip">SQL</span>
+              <span class="stack-chip">UNIX shell</span>
+              <span class="stack-chip">Excel</span>
+              <span class="stack-chip">Stored Procs</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="exp-item reveal d-1">
+          <div class="exp-left">
+            <div class="date">May — Aug 2024</div>
+            <div class="loc">Remote · India</div>
+            <div class="loc" style="margin-top:10px;">4 months · internship</div>
+          </div>
+          <div class="exp-right">
+            <div class="title-row">
+              <div class="title">Data Analyst Intern</div>
+              <div class="at">@</div>
+              <div class="company">YBI Foundation</div>
+            </div>
+            <div style="color:var(--text-dim); font-size:.94rem; max-width:620px; margin-top:8px;">
+              Summer internship during MIM. Focus: forecasting, KPI dashboards, and data cleaning
+              for the programme's internal operations.
+            </div>
+            <ul class="bullets">
+              <li>Built a sales forecasting model in Python (Scikit-learn) improving <strong>MAPE by 15%</strong> vs. a naïve baseline on a 12-month hold-out.</li>
+              <li>Cleaned and unified <strong>200,000+ records</strong> from 3 sources (Excel, SQL exports, CSV logs) into a single analysis-ready dataset.</li>
+              <li>Designed Power BI KPI dashboards adopted into weekly exec reviews — <strong>my first hands-on Power BI work</strong>, which I've kept developing through MSc projects.</li>
+            </ul>
+            <div class="stack">
+              <span class="stack-chip">Python</span>
+              <span class="stack-chip">Scikit-learn</span>
+              <span class="stack-chip">SQL</span>
+              <span class="stack-chip">Power BI</span>
+              <span class="stack-chip">pandas</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <div class="reveal"><div class="eyebrow">03 · Skills</div></div>
+      <h2 class="section-title reveal d-1">The stack I actually <em>use</em>.</h2>
+      <p class="section-lead reveal d-2">
+        Honest labels. Anything marked "learning" is something I'm actively ramping up on —
+        not claiming yet.
+      </p>
+
+      <div class="skills-intro reveal d-2">
+        <div class="legend"><span class="swatch prod"></span> Production-ready</div>
+        <div class="legend"><span class="swatch learn"></span> Actively learning</div>
+      </div>
+
+      <div class="skills-grid">
+        <div class="sc reveal">
+          <div class="sc-head">
+            <h4>Data analysis &amp; BI</h4>
+            <div class="cat">01</div>
+          </div>
+          <div class="sc-chips">
+            <span class="chip primary">SQL (windows, CTEs, tuning)</span>
+            <span class="chip primary">Excel (advanced + Power Query)</span>
+            <span class="chip primary">Power BI + DAX</span>
+            <span class="chip">Tableau</span>
+            <span class="chip learning">Looker Studio</span>
+          </div>
+        </div>
+
+        <div class="sc reveal d-1">
+          <div class="sc-head">
+            <h4>Programming</h4>
+            <div class="cat">02</div>
+          </div>
+          <div class="sc-chips">
+            <span class="chip primary">Python</span>
+            <span class="chip primary">pandas</span>
+            <span class="chip primary">BeautifulSoup</span>
+            <span class="chip primary">scikit-learn</span>
+            <span class="chip primary">UNIX shell scripting</span>
+            <span class="chip">Jupyter</span>
+          </div>
+        </div>
+
+        <div class="sc reveal">
+          <div class="sc-head">
+            <h4>Statistics &amp; methods</h4>
+            <div class="cat">03</div>
+          </div>
+          <div class="sc-chips">
+            <span class="chip primary">EDA</span>
+            <span class="chip primary">Regression</span>
+            <span class="chip primary">Hypothesis testing</span>
+            <span class="chip">Time-series forecasting</span>
+            <span class="chip learning">A/B testing</span>
+          </div>
+        </div>
+
+        <div class="sc reveal d-1">
+          <div class="sc-head">
+            <h4>Data engineering</h4>
+            <div class="cat">04</div>
+          </div>
+          <div class="sc-chips">
+            <span class="chip primary">SQL stored procs &amp; indexing</span>
+            <span class="chip primary">Alteryx (3× certified)</span>
+            <span class="chip primary">Web scraping (BS4 + requests)</span>
+            <span class="chip primary">Finacle banking data</span>
+            <span class="chip learning">dbt</span>
+          </div>
+        </div>
+
+        <div class="sc reveal">
+          <div class="sc-head">
+            <h4>Cloud &amp; tools</h4>
+            <div class="cat">05</div>
+          </div>
+          <div class="sc-chips">
+            <span class="chip primary">Git / GitHub</span>
+            <span class="chip primary">Docker</span>
+            <span class="chip">Azure Fundamentals</span>
+            <span class="chip learning">AWS Lambda</span>
+            <span class="chip learning">Streamlit</span>
+          </div>
+        </div>
+
+        <div class="sc reveal d-1">
+          <div class="sc-head">
+            <h4>Soft skills that matter</h4>
+            <div class="cat">06</div>
+          </div>
+          <div class="sc-chips">
+            <span class="chip primary">Stakeholder comms</span>
+            <span class="chip primary">Cross-time-zone delivery</span>
+            <span class="chip primary">Documentation</span>
+            <span class="chip primary">Requirement gathering</span>
+            <span class="chip primary">Trilingual work</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="container">
+      <div class="reveal"><div class="eyebrow">04 · Selected work</div></div>
+      <h2 class="section-title reveal d-1">Four projects, <em>clearly</em> labelled.</h2>
+      <p class="section-lead reveal d-2">
+        Each project is tagged by type so you know what you're reading — production work
+        or academic / learning. I believe in being explicit about this.
+      </p>
+
+      <div class="work-intro reveal d-2">
+        <div class="icon">i</div>
+        <div>
+          <strong>Honesty note:</strong> Production work at Infosys is under NDA and can't be
+          shared publicly. Everything else is on GitHub with real code.
+        </div>
+      </div>
+
+      <div class="work-list">
+
+        <article class="work reveal">
+          <div class="work-head" data-toggle>
+            <div class="work-head-left">
+              <div class="work-meta">
+                <span class="tag real">● Production · 1.5 yrs</span>
+                <span>01</span>
+                <span>Banking software · Finacle</span>
+              </div>
+              <h3>Finacle core banking — European bank deliveries</h3>
+              <p class="work-one">
+                1.5 years as a Software Engineer at Infosys building SQL, UNIX, and Excel-based
+                reporting on the Finacle platform for European banking clients. My anchor
+                project — production banking software at scale.
+              </p>
+            </div>
+            <div class="work-head-right">
+              <div>
+                <div class="work-headline"><span class="num">EU</span></div>
+                <div class="work-headline-label">banking clients</div>
+                <div class="work-expand">Expand <span class="arrow">▾</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="work-body">
+            <div class="work-body-inner">
+              <div class="wb-block">
+                <div class="wb-label">Problem</div>
+                <div class="wb-content">
+                  European banking clients running Finacle needed reliable, repeatable reporting
+                  — daily transaction summaries, branch activity, reconciliations — pulled from
+                  complex banking schemas and delivered in formats their internal teams could
+                  consume directly (Excel).
+                </div>
+              </div>
+              <div class="wb-block">
+                <div class="wb-label data">Data</div>
+                <div class="wb-content">
+                  Finacle core banking schemas — Payments, CRM, Treasury, Wealth Management.
+                  Transaction tables, customer master data, branch hierarchies. Production data,
+                  governed by client SLAs and audit requirements.
+                </div>
+              </div>
+              <div class="wb-block full">
+                <div class="wb-label approach">Approach</div>
+                <div class="wb-content">
+                  <ul>
+                    <li><strong>SQL:</strong> wrote and tuned queries against Finacle schemas — joins, aggregations, stored procedures, indexed lookups</li>
+                    <li><strong>UNIX scripting:</strong> shell scripts to schedule extracts, move files, and chain SQL outputs into reporting workflows</li>
+                    <li><strong>Excel reports:</strong> structured deliverables with pivot tables, formulas, and conditional formatting — the format client banking teams actually used in their daily ops</li>
+                    <li><strong>Performance work:</strong> profiled slow queries, added indexes, rewrote inefficient joins — turned reports that ran for hours into ones that ran in minutes</li>
+                    <li><strong>Cross-time-zone collaboration:</strong> daily handoffs with onshore teams in Europe; clear documentation so production scripts could be picked up by anyone</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="wb-block">
+                <div class="wb-label insight">Key takeaway</div>
+                <div class="wb-content">
+                  <strong>Banking reporting is reliability work.</strong> A wrong number on a
+                  reconciliation report doesn't just look bad — it can trigger a regulatory
+                  question. That mindset (every query has consequences) is what I bring into
+                  every analytics task now.
+                </div>
+              </div>
+              <div class="wb-block">
+                <div class="wb-label impact">Honest impact</div>
+                <div class="wb-content">
+                  Query optimisation work <strong>saved the team hours per reporting cycle</strong>
+                  by turning multi-hour scripts into ones that completed in minutes. Documentation
+                  &amp; clean handoffs reduced the back-and-forth with onshore teams.
+                </div>
+              </div>
+              <div class="wb-block full">
+                <div class="wb-label stack">Tech stack</div>
+                <div class="stack-chips">
+                  <span class="chip primary">Finacle</span>
+                  <span class="chip primary">SQL (Oracle)</span>
+                  <span class="chip primary">UNIX shell scripting</span>
+                  <span class="chip primary">Excel (advanced)</span>
+                  <span class="chip primary">Stored procedures</span>
+                  <span class="chip primary">Indexing &amp; tuning</span>
+                </div>
+                <div class="work-links">
+                  <span class="work-link disabled"><span class="ic">🔒</span> Under NDA — available on request</span>
+                </div>
+                <div class="wb-note">
+                  Happy to walk through architecture, query examples, and the workflow design
+                  verbally in an interview — within what NDA allows.
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="work reveal d-1">
+          <div class="work-head" data-toggle>
+            <div class="work-head-left">
+              <div class="work-meta">
+                <span class="tag real">● Shipped · Apr 2026</span>
+                <span>02</span>
+                <span>Python · web scraping</span>
+              </div>
+              <h3>Amazon price tracker &amp; email alerter</h3>
+              <p class="work-one">
+                A Python project I built end-to-end to learn web scraping properly. Tracks a
+                product on amazon.fr daily, logs to CSV, and emails me when the price drops
+                below my target.
+              </p>
+            </div>
+            <div class="work-head-right">
+              <div>
+                <div class="work-headline"><span class="num">daily</span></div>
+                <div class="work-headline-label">auto price check</div>
+                <div class="work-expand">Expand <span class="arrow">▾</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="work-body">
+            <div class="work-body-inner">
+              <div class="wb-block">
+                <div class="wb-label">Problem</div>
+                <div class="wb-content">
+                  I wanted to learn web scraping by solving a real problem. I was watching a
+                  Pokémon Charizard T-shirt on amazon.fr waiting for it to drop below €20 — so I
+                  built a script to check the price daily and email me when it does.
+                </div>
+              </div>
+              <div class="wb-block">
+                <div class="wb-label data">Data</div>
+                <div class="wb-content">
+                  Live Amazon.fr product page HTML · scraped daily · title + price extracted to
+                  CSV with timestamp. Small dataset — but it's <em>mine</em>, not a Kaggle download.
+                </div>
+              </div>
+              <div class="wb-block full">
+                <div class="wb-label approach">Approach</div>
+                <div class="wb-content">
+                  <ul>
+                    <li><strong>Scraping:</strong> <code>requests</code> with custom browser headers (User-Agent, Accept-Language) to avoid bot detection</li>
+                    <li><strong>Parsing:</strong> <code>BeautifulSoup</code> to extract title and price using <code>a-price-whole</code> + <code>a-price-fraction</code> selectors (the old <code>priceblock_ourprice</code> ID no longer exists — debugged via DevTools)</li>
+                    <li><strong>Locale handling:</strong> amazon.fr shows prices as "22,00" — wrote cleanup for the French comma decimal</li>
+                    <li><strong>Persistence:</strong> <code>csv</code> module, append-only, header written once</li>
+                    <li><strong>Alerting:</strong> <code>smtplib</code> + Gmail SMTP with an App Password; triggers when price &lt; €20</li>
+                    <li><strong>Scheduling:</strong> <code>while True</code> loop with 24-hour sleep</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="wb-block">
+                <div class="wb-label insight">What I learned</div>
+                <div class="wb-content">
+                  <strong>Tutorials go out of date fast.</strong> Amazon's HTML had changed since
+                  the tutorial I followed — the price selector was broken. I had to inspect the
+                  real page in DevTools to find new classes. That debugging skill (<em>read the
+                  real HTML, don't trust the tutorial</em>) transfers to every scraping job.
+                </div>
+              </div>
+              <div class="wb-block">
+                <div class="wb-label impact">Honest scope</div>
+                <div class="wb-content">
+                  This is a <strong>learning project, not production</strong>. Tracks one product.
+                  Runs on my laptop. But every part — headers, parsing, CSV, email, scheduling —
+                  works end-to-end. Extending next to track multiple products across
+                  amazon.fr / .de / .co.uk.
+                </div>
+              </div>
+              <div class="wb-block full">
+                <div class="wb-label stack">Tech stack</div>
+                <div class="stack-chips">
+                  <span class="chip primary">Python 3.13</span>
+                  <span class="chip primary">BeautifulSoup4</span>
+                  <span class="chip primary">requests</span>
+                  <span class="chip primary">pandas</span>
+                  <span class="chip primary">smtplib (SMTP)</span>
+                  <span class="chip primary">csv</span>
+                  <span class="chip primary">Jupyter</span>
+                </div>
+                <div class="work-links">
+                  <a class="work-link" href="https://github.com/prasanna-jaganadham" target="_blank" rel="noopener"><span class="ic">&lt;/&gt;</span> GitHub repo + README</a>
+                  <a class="work-link" href="https://github.com/prasanna-jaganadham" target="_blank" rel="noopener"><span class="ic">📓</span> Jupyter notebook</a>
+                </div>
+                <div class="wb-note">
+                  The README documents the 6 real bugs I hit (Amazon blocking, broken selectors,
+                  French comma decimals, Gmail App Passwords, CSV duplicate headers, infinite
+                  loop stuck in Jupyter) and how I fixed each one. That debugging trail is the
+                  project.
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="work reveal d-2">
+          <div class="work-head" data-toggle>
+            <div class="work-head-left">
+              <div class="work-meta">
+                <span class="tag academic">◆ Academic · MSc project</span>
+                <span>03</span>
+                <span>Power BI · DAX</span>
+              </div>
+              <h3>Spotify music analytics dashboard</h3>
+              <p class="work-one">
+                A Power BI dashboard analysing music trends, artist performance, and listener
+                engagement using dynamic slicers, custom DAX measures, and KPI cards. Built
+                during the MSc to practise data modelling end-to-end.
+              </p>
+            </div>
+            <div class="work-head-right">
+              <div>
+                <div class="work-headline"><span class="num">DAX</span></div>
+                <div class="work-headline-label">interactive dashboard</div>
+                <div class="work-expand">Expand <span class="arrow">▾</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="work-body">
+            <div class="work-body-inner">
+              <div class="wb-block">
+                <div class="wb-label">Problem</div>
+                <div class="wb-content">
+                  Music streaming generates huge amounts of engagement data, but most of it sits
+                  in static tables. The goal: turn a Spotify dataset into an interactive dashboard
+                  where anyone could slice by genre, era, or artist and get answers in seconds.
+                </div>
+              </div>
+              <div class="wb-block">
+                <div class="wb-label data">Data</div>
+                <div class="wb-content">
+                  Public Spotify tracks dataset (Kaggle) — hundreds of tracks with audio features
+                  (energy, danceability, tempo, acousticness, etc.), stream counts, artist
+                  metadata, and release year.
+                </div>
+              </div>
+              <div class="wb-block full">
+                <div class="wb-label approach">Approach</div>
+                <div class="wb-content">
+                  <ul>
+                    <li><strong>Data modelling:</strong> star schema with tracks fact table + artist / genre / era dimensions</li>
+                    <li><strong>DAX measures:</strong> custom measures for stream share, average energy by era, YoY artist growth, top-N by genre</li>
+                    <li><strong>Interactivity:</strong> slicers for genre, release year, artist; drill-through from artist → tracks</li>
+                    <li><strong>Visuals:</strong> KPI cards, radial audio-feature profiles, time-series, ranked bar charts</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="wb-block">
+                <div class="wb-label insight">Key insight</div>
+                <div class="wb-content">
+                  <strong>Audio features cluster strongly by era</strong> — energy and loudness
+                  have trended upward over decades, while acousticness drops sharply after 2000.
+                  Useful for anyone building era-based recommendation logic.
+                </div>
+              </div>
+              <div class="wb-block">
+                <div class="wb-label impact">What it taught me</div>
+                <div class="wb-content">
+                  Power BI fundamentals end-to-end — <strong>star schema design, DAX measure
+                  patterns, and interactive slicer design</strong>. This was my deepest hands-on
+                  Power BI work, building on what I started during the YBI internship.
+                </div>
+              </div>
+              <div class="wb-block full">
+                <div class="wb-label stack">Tech stack</div>
+                <div class="stack-chips">
+                  <span class="chip primary">Power BI</span>
+                  <span class="chip primary">DAX</span>
+                  <span class="chip primary">Data modelling (star schema)</span>
+                  <span class="chip primary">Power Query</span>
+                </div>
+                <div class="work-links">
+                  <a class="work-link" href="https://github.com/prasanna-jaganadham" target="_blank" rel="noopener"><span class="ic">&lt;/&gt;</span> GitHub repo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="work reveal d-2">
+          <div class="work-head" data-toggle>
+            <div class="work-head-left">
+              <div class="work-meta">
+                <span class="tag academic">◆ Academic · MSc project</span>
+                <span>04</span>
+                <span>SQL · Docker · statistics</span>
+              </div>
+              <h3>COVID-19 ICU &amp; Med/Surg patient load analysis</h3>
+              <p class="work-one">
+                A dockerised SQL database monitoring ICU and surgical patient loads, with
+                hypothesis testing to identify over-capacity risk patterns across hospital
+                facilities.
+              </p>
+            </div>
+            <div class="work-head-right">
+              <div>
+                <div class="work-headline"><span class="num">p &lt; 0.05</span></div>
+                <div class="work-headline-label">risk patterns identified</div>
+                <div class="work-expand">Expand <span class="arrow">▾</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="work-body">
+            <div class="work-body-inner">
+              <div class="wb-block">
+                <div class="wb-label">Problem</div>
+                <div class="wb-content">
+                  Public health teams needed a way to compare ICU and Med/Surg capacity utilisation
+                  across facilities — and statistically identify which hospitals were running
+                  persistently over capacity.
+                </div>
+              </div>
+              <div class="wb-block">
+                <div class="wb-label data">Data</div>
+                <div class="wb-content">
+                  Public US hospital capacity data — daily bed utilisation across hundreds of
+                  facilities over the pandemic window.
+                </div>
+              </div>
+              <div class="wb-block full">
+                <div class="wb-label approach">Approach</div>
+                <div class="wb-content">
+                  <ul>
+                    <li>Built a Dockerised PostgreSQL schema for reproducibility</li>
+                    <li>SQL aggregations for occupancy ratios by facility and week</li>
+                    <li>Hypothesis testing (two-sample t-tests with multiple-comparison correction) on facilities exceeding capacity thresholds</li>
+                    <li>Output: ranked list of facilities + confidence intervals for operational follow-up</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="wb-block">
+                <div class="wb-label insight">Key insight</div>
+                <div class="wb-content">
+                  Over-capacity was not random — a subset of facilities showed
+                  <strong>statistically significant, persistent strain</strong> rather than
+                  random spikes. That changes the operational response from "add beds" to
+                  "rebalance intake."
+                </div>
+              </div>
+              <div class="wb-block">
+                <div class="wb-label impact">What I'd do differently</div>
+                <div class="wb-content">
+                  Academic project — the next step would be tying the stats output to a
+                  dashboard the hospital ops team could use weekly. Closing that loop is what
+                  separates analysis from impact.
+                </div>
+              </div>
+              <div class="wb-block full">
+                <div class="wb-label stack">Tech stack</div>
+                <div class="stack-chips">
+                  <span class="chip primary">PostgreSQL</span>
+                  <span class="chip primary">Docker</span>
+                  <span class="chip primary">Python (scipy.stats)</span>
+                  <span class="chip">Jupyter</span>
+                </div>
+                <div class="work-links">
+                  <a class="work-link" href="https://github.com/prasanna-jaganadham" target="_blank" rel="noopener"><span class="ic">&lt;/&gt;</span> GitHub repo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <div class="reveal"><div class="eyebrow">05 · Education</div></div>
+      <h2 class="section-title reveal d-1">Studied. Certified. <em>Multilingual.</em></h2>
+      <p class="section-lead reveal d-2">
+        Grande École track in France — management first, then data science. Industry
+        certifications keep it grounded.
+      </p>
+
+      <div class="edu-wrap">
+        <div class="edu-col">
+          <div class="edu-card reveal">
+            <div class="edu-top">
+              <div>
+                <div class="edu-degree">MSc Data Science &amp; Organisational Behaviour</div>
+                <div class="edu-inst">Burgundy School of Business (Grande École) — Dijon 🇫🇷</div>
+              </div>
+              <div class="edu-year">2024 — 2025</div>
+            </div>
+            <div class="edu-note">
+              Machine learning · statistical modelling · applied organisational analytics
+            </div>
+          </div>
+          <div class="edu-card reveal d-1">
+            <div class="edu-top">
+              <div>
+                <div class="edu-degree">Master in Management (MIM)</div>
+                <div class="edu-inst">Burgundy School of Business (Grande École) — Dijon 🇫🇷</div>
+              </div>
+              <div class="edu-year">2023 — 2024</div>
+            </div>
+            <div class="edu-note">
+              Grande École programme · strategy, finance, cross-functional management
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-col">
+          <div class="side-card reveal">
+            <div class="side-head">Languages</div>
+            <div class="lang-list">
+              <div class="lang-row">
+                <span class="lang-name">English</span>
+                <span class="lang-level c1">C1 · Fluent</span>
+              </div>
+              <div class="lang-row">
+                <span class="lang-name">French</span>
+                <span class="lang-level b1">B1 → B2 by 2026</span>
+              </div>
+              <div class="lang-row">
+                <span class="lang-name">Telugu</span>
+                <span class="lang-level native">Native</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="side-card reveal d-1">
+            <div class="side-head">Certifications</div>
+            <div class="cert-list">
+              <div class="cert-row"><span class="cert-dot"></span>Alteryx Data Manipulation</div>
+              <div class="cert-row"><span class="cert-dot"></span>Alteryx Data Preparation</div>
+              <div class="cert-row"><span class="cert-dot"></span>Alteryx Data Transformation</div>
+              <div class="cert-row"><span class="cert-dot"></span>Bloomberg Market Concepts (BMC)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="reveal"><div class="eyebrow">06 · Get in touch</div></div>
+
+      <div class="contact-wrap reveal d-1">
+        <div class="contact-left">
+          <h3>Looking for the right team.</h3>
+          <p>
+            If you're hiring Data Analysts or BI Developers in France — or you know someone who
+            is — I'd love to talk. Fastest reply on email or LinkedIn. I respond in under 24h.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:jaganadhamprasanna@gmail.com" class="cl primary">
+              <span class="ic">@</span> jaganadhamprasanna@gmail.com
+            </a>
+            <a href="https://linkedin.com/in/prasanna-jaganadham-190780228/" target="_blank" rel="noopener" class="cl secondary">
+              <span class="ic">in</span> LinkedIn
+            </a>
+            <a href="https://github.com/PrasannaJaganadham" target="_blank" rel="noopener" class="cl secondary">
+              <span class="ic">gh</span> GitHub
+            </a>
+            <a href="tel:+33683211050" class="cl secondary">
+              <span class="ic">☏</span> +33 6 83 21 10 50
+            </a>
+          </div>
+        </div>
+        <div class="contact-right">JP</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot">
+      <div class="left">© 2026 Prasanna Jaganadham · Built in Dijon 🇫🇷</div>
+      <div class="right">
+        <a href="#top">Back to top ↑</a>
+        <a href="mailto:jaganadhamprasanna@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/prasanna-jaganadham-190780228/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const canvas = document.getElementById('particles');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let particles;
+  function size(){
+    const dpr = Math.min(devicePixelRatio || 1, 2);
+    canvas.width  = innerWidth  * dpr;
+    canvas.height = innerHeight * dpr;
+    canvas.style.width  = innerWidth  + 'px';
+    canvas.style.height = innerHeight + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function init(){
+    const count = Math.max(40, Math.min(100, Math.floor(innerWidth * innerHeight / 18000)));
+    particles = Array.from({ length: count }, () => ({
+      x: Math.random() * innerWidth, y: Math.random() * innerHeight,
+      vx: (Math.random() - 0.5) * 0.25, vy: (Math.random() - 0.5) * 0.25,
+      r: Math.random() * 1.3 + 0.5
+    }));
+  }
+  function tick(){
+    ctx.clearRect(0, 0, innerWidth, innerHeight);
+    for (const p of particles){
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > innerWidth)  p.vx *= -1;
+      if (p.y < 0 || p.y > innerHeight) p.vy *= -1;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(34,211,238,0.65)';
+      ctx.shadowBlur = 8;
+      ctx.shadowColor = 'rgba(34,211,238,0.5)';
+      ctx.fill();
+    }
+    ctx.shadowBlur = 0;
+    const MAX = 140;
+    for (let i = 0; i < particles.length; i++){
+      for (let j = i + 1; j < particles.length; j++){
+        const a = particles[i], b = particles[j];
+        const dx = a.x - b.x, dy = a.y - b.y;
+        const d = Math.hypot(dx, dy);
+        if (d < MAX){
+          const alpha = (1 - d / MAX) * 0.28;
+          ctx.strokeStyle = `rgba(34,211,238,${alpha})`;
+          ctx.lineWidth = 0.6;
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(tick);
+  }
+  size(); init(); tick();
+  let rzto;
+  addEventListener('resize', () => {
+    clearTimeout(rzto);
+    rzto = setTimeout(() => { size(); init(); }, 120);
+  });
+})();
+
+(() => {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting){
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: .1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+})();
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    if (id && id.length > 1 && document.querySelector(id)){
+      e.preventDefault();
+      document.querySelector(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+(() => {
+  const nav = document.getElementById('nav');
+  addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', scrollY > 40);
+  });
+})();
+
+(() => {
+  const menu = document.getElementById('cvMenu');
+  const btn = document.getElementById('cvBtn');
+  const heroCv = document.getElementById('heroCv');
+  if (!menu || !btn) return;
+  btn.addEventListener('click', e => {
+    e.stopPropagation();
+    menu.classList.toggle('open');
+  });
+  document.addEventListener('click', e => {
+    if (!menu.contains(e.target)) menu.classList.remove('open');
+  });
+  if (heroCv){
+    heroCv.addEventListener('click', e => {
+      e.preventDefault();
+      menu.classList.add('open');
+      btn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+})();
+
+document.querySelectorAll('.work').forEach(card => {
+  const head = card.querySelector('[data-toggle]');
+  if (!head) return;
+  head.addEventListener('click', e => {
+    if (e.target.closest('a.work-link')) return;
+    card.classList.toggle('open');
+  });
+});
+</script>
+
+</body>
+</html>
